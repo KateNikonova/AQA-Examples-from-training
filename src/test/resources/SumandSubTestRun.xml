@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Simple calculator test">
+
+    <test name="Calculator Passed">
+        <classes>
+            <class name="hw1.operations.SumOperationTest"/>
+            <class name="hw1.operations.SubOperationTest"/>
+        </classes>
+    </test>
+
+</suite>

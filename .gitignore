@@ -1,4 +1,6 @@
-# to exclude
+# to exclude folders
 .idea/
 target/
-e/
+
+# to exclude files
+*.iml

@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Mult and Dev tests">
+
+    <test name="Calculator Passed">
+        <classes>
+            <class name="hw1.operations.MultOperationTest"/>
+            <class name="hw1.operations.DevOperationTest"/>
+        </classes>
+    </test>
+
+</suite>
