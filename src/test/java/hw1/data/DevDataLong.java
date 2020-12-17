@@ -2,10 +2,10 @@ package hw1.data;
 
 import org.testng.annotations.DataProvider;
 
-public class DevData_long {
+public class DevDataLong {
 
-    @DataProvider(name = "DevDataProvider_long")
-    public Object[][] DevDataSet() {
+    @DataProvider(name = "DevDataProviderLong")
+    public Object[][] DevLongDataSet() {
         return new Object[][]{
                 {2, 2, 1},
                 {-10, 5, -2},

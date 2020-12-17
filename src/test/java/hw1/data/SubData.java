@@ -4,7 +4,7 @@ import org.testng.annotations.DataProvider;
 
 public class SubData {
 
-    @DataProvider(name = "SubDataProvider_double")
+    @DataProvider(name = "SubDataProviderDouble")
     public static Object[][] SubDataSet() {
         return new Object[][]{
                 {3.5, 4.4, -0.9},

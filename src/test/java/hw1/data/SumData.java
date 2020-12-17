@@ -4,7 +4,7 @@ import org.testng.annotations.DataProvider;
 
 public class SumData {
 
-    @DataProvider(name = "SumDataProvider_double")
+    @DataProvider(name = "SumDataProviderDouble")
     public Object[][] SumDataSet() {
         return new Object[][] {
                 {3.5, 4.4, 7.9},

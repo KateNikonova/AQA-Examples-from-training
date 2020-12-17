@@ -9,7 +9,7 @@ import static org.testng.Assert.assertEquals;
 public class SumOperationTest extends AbstractOperationTest{
 
     @DataProvider
-    public Object[][] SumDataSet_long() {
+    public Object[][] SumDataSetLong() {
         return new Object[][] {
                 {2, 2, 4},
                 {0, 0, 0},
@@ -18,13 +18,13 @@ public class SumOperationTest extends AbstractOperationTest{
         };
     }
 
-    @Test(dataProvider = "SumDataSet_long")
+    @Test(dataProvider = "SumDataSetLong")
     public void dataProviderLongSumTest(long a, long b, long expected) {
         double actual = calculator.sum(a, b);
         assertEquals(actual, expected, 0.001);
     }
 
-    @Test(dataProvider = "SumDataProvider_double", dataProviderClass = SumData.class)
+    @Test(dataProvider = "SumDataProviderDouble", dataProviderClass = SumData.class)
     public void dataProviderDoubleSumTest(double a, double b, double expected) {
         double actual = calculator.sum(a, b);
         assertEquals(actual, expected, 0.001);

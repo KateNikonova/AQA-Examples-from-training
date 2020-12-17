@@ -4,6 +4,9 @@
     <test name="Calculator Passed">
         <classes>
             <class name="hw1.operations.SumOperationTest"/>
+            <class name="hw1.operations.SubOperationTest"/>
+            <class name="hw1.operations.MultOperationTest"/>
+            <class name="hw1.operations.DevOperationTest"/>
         </classes>
     </test>
 

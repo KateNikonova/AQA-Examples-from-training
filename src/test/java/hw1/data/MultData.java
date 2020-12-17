@@ -7,10 +7,10 @@ public class MultData {
     @DataProvider(name = "MultDataProvider")
     public Object[][] MultDataSet() {
         return new Object[][]{
-                {3.5, 2.2, 7.7},
-                {10.1, 1.0, 10.1},
+                {3.5, 2.2, 7.0},
+                {10.1, 1.0, 10.0},
                 {-5.0, 2, -10},
-                {-30.3, -3.0, 90.9}
+                {-30.3, -3.0, 90.0}
         };
     }
 }

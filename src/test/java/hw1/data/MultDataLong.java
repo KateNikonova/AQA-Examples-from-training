@@ -2,10 +2,10 @@ package hw1.data;
 
 import org.testng.annotations.DataProvider;
 
-public class MultData_long {
+public class MultDataLong {
 
-    @DataProvider(name = "MultDataProvider_long")
-    public Object[][] MultDataSet() {
+    @DataProvider(name = "MultDataProviderLong")
+    public Object[][] MultLongDataSet() {
         return new Object[][]{
                 {7, 2, 14},
                 {10, 1, 10},
