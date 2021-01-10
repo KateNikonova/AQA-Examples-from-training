@@ -19,7 +19,16 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <suite.file>${project.basedir}/src/test/resources/DefaultTestRun.xml</suite.file>
+                <suite.file>${project.basedir}/src/test/resources/hw2/DefaultWebDriverTest.xml</suite.file>
+            </properties>
+        </profile>
+        <profile>
+            <id>suite3</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.file>${project.basedir}/src/test/resources/hw1/DefaultTestRun.xml</suite.file>
             </properties>
         </profile>
         <profile>
@@ -28,7 +37,7 @@
                 <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
-                <suite.file>${project.basedir}/src/test/resources/SumandSubTestRun.xml</suite.file>
+                <suite.file>${project.basedir}/src/test/resources/hw1/SumandSubTestRun.xml</suite.file>
             </properties>
         </profile>
         <profile>
@@ -37,7 +46,7 @@
                 <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
-                <suite.file>${project.basedir}/src/test/resources/MultandDevTestRun.xml</suite.file>
+                <suite.file>${project.basedir}/src/test/resources/hw1/MultandDevTestRun.xml</suite.file>
             </properties>
         </profile>
     </profiles>
@@ -82,7 +91,7 @@
                 <version>3.0.0-M5</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>${project.basedir}/src/test/resources/DefaultTestRun.xml</suiteXmlFile>
+                        <suiteXmlFile>${project.basedir}/src/test/resources/hw2/DefaultWebDriverTest.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
