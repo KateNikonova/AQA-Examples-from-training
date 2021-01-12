@@ -1,69 +1,67 @@
 package hw2.ex2;
 
+import hw2.data.AbstractPageTest;
+import hw2.ex1.DefaultPageTest;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-public class DifElementsPageTest {
+public class DifElementsPageTest extends AbstractPageTest {
 
-    private WebDriver driver;
+    final String testing_page = "https://jdi-testing.github.io/jdi-light/index.html";
 
-    @BeforeMethod(alwaysRun = true)
-    public void ChromeSetUp()
+    public void findAndClickElement(String path, String type)
     {
-        driver = new ChromeDriver();
+        switch (type){
+        case "id":
+            driver.findElement(By.id(path)).click();
+            break;
+        case "css":
+            driver.findElement(By.cssSelector(path)).click();
+            break;
+        default:
+            driver.findElement(By.xpath(path)).click();
+    }
+
     }
 
     @Test (description = "Different Elements Page Test")
-    public void MyTest_02()  {
+    public void DifferentElementsPageTestMethod()  {
 
         driver.manage().window().maximize();
 
         //1. Open test site by URL
-        driver.get("https://jdi-testing.github.io/jdi-light/index.html");
+        driver.get(testing_page);
 
         //2. Assert Browser title
         assertEquals(driver.getTitle(), "Home Page");
 
         //3. Perform login
-        WebDriverWait waitcicon = new WebDriverWait(driver, 10);
-        waitcicon.until(ExpectedConditions.presenceOfElementLocated(By.id("user-icon")));
-        driver.findElement(By.id("user-icon")).click();
-        driver.findElement(By.id("name")).sendKeys("Roman");
-        driver.findElement(By.id("password")).sendKeys("Jdi1234");
-        driver.findElement(By.id("login-button")).click();
+        DefaultPageTest.loginPage("Roman","Jdi1234");
 
         //4. Assert Username is logged
-        WebDriverWait waitname = new WebDriverWait(driver, 20);
-        waitname.until(ExpectedConditions.presenceOfElementLocated(By.id("user-name")));
-        assertTrue(driver.findElement(By.id("user-name")).isDisplayed());
-        assertEquals(driver.findElement(By.id("user-name")).getText(), "ROMAN IOVLEV");
+        WebDriverWait wait_name = new WebDriverWait(driver, 20);
+        wait_name.until(ExpectedConditions.presenceOfElementLocated(By.id("user-name")));
+        DefaultPageTest.checkElementPresenceAndValue("user-name","ROMAN IOVLEV","id");
 
         //5. Open through the header menu Service -> Different Elements Page
-        driver.findElement(By.cssSelector("ul.uui-navigation.nav.navbar-nav.m-l8>li.dropdown")).click();
+        findAndClickElement("ul.uui-navigation.nav.navbar-nav.m-l8>li.dropdown","css");
         WebDriverWait list = new WebDriverWait(driver, 10);
         list.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[contains(text(),'Different elements')]")));
-        driver.findElement(By.xpath("//a[contains(text(),'Different elements')]")).click();
+        findAndClickElement("//a[contains(text(),'Different elements')]","xpath");
 
         //6. Select checkboxes
-        WebElement checkbox1 = driver.findElement(By.cssSelector("div.checkbox-row>label:nth-child(1)"));
-        WebElement checkbox2 = driver.findElement(By.cssSelector("div.checkbox-row>label:nth-child(3)"));
-        checkbox1.click();
-        checkbox2.click();
+        findAndClickElement("div.checkbox-row>label:nth-child(1)","css");
+        findAndClickElement("div.checkbox-row>label:nth-child(3)","css");
 
         //7. Select radio
-        WebElement radio = driver.findElement(By.cssSelector("div.checkbox-row>label.label-radio:nth-child(4)"));
-        radio.click();
+        findAndClickElement("div.checkbox-row>label.label-radio:nth-child(4)","css");
 
         //8. Select in dropdown
         Select drpYellow  = new Select(driver.findElement(By.cssSelector("div.colors>select.uui-form-element")));
@@ -71,22 +69,14 @@ public class DifElementsPageTest {
 
         //9.1 Assert that
         //•	for each checkbox there is an individual log row and value is corresponded to the status of checkbox
-        assertTrue(driver.findElement(By.xpath("//li[contains(text(),'Water')]")).isDisplayed());
-        assertTrue(driver.findElement(By.xpath("//li[contains(text(),'Wind')]")).isDisplayed());
+        DefaultPageTest.checkElementPresence("//li[contains(text(),'Water')]","xpath");
+        DefaultPageTest.checkElementPresence("//li[contains(text(),'Wind')]","xpath");
 
         //•	for radio button there is a log row and value is corresponded to the status of radio button
-        assertTrue(driver.findElement(By.xpath("//li[contains(text(),'Selen')]")).isDisplayed());
+        DefaultPageTest.checkElementPresence("//li[contains(text(),'Selen')]","xpath");
 
         //•	for dropdown there is a log row and value is corresponded to the selected value
-        assertTrue(driver.findElement(By.xpath("//li[contains(text(),'Yellow')]")).isDisplayed());
+        DefaultPageTest.checkElementPresence("//li[contains(text(),'Yellow')]","xpath");
 
-    }
-
-    //10. Close Browser
-    @AfterMethod(alwaysRun = true)
-        public  void ChromeClose()
-    {
-        driver.quit();
-        driver=null;
     }
 }
