@@ -12,9 +12,9 @@ import static org.testng.Assert.assertEquals;
 public class DefaultPageImagesText {
     public WebDriver driver;
 
-    public DefaultPageImagesText(WebDriver driver){
+    public DefaultPageImagesText(WebDriver driver) {
         PageFactory.initElements(driver, this);
-        this.driver=driver;
+        this.driver = driver;
     }
 
     // icon practise text locator
@@ -26,32 +26,30 @@ public class DefaultPageImagesText {
     public WebElement iconCustomText;
 
     //icon multi text locator
-    @FindBy(css="div.col-sm-3:nth-child(3)>div.benefit>span.benefit-txt")
+    @FindBy(css = "div.col-sm-3:nth-child(3)>div.benefit>span.benefit-txt")
     public WebElement iconBaseText;
 
     //icon base text locator
-    @FindBy(css="div.col-sm-3:nth-child(4)>div.benefit>span.benefit-txt")
+    @FindBy(css = "div.col-sm-3:nth-child(4)>div.benefit>span.benefit-txt")
     public WebElement iconMultiText;
 
     //get all images text amount
-    @FindBy(css="div.benefit>span.benefit-txt")
+    @FindBy(css = "div.benefit>span.benefit-txt")
     public List<WebElement> imagesText;
 
     //check images text amount
-    public void checkImagesTextAmount(Integer num)
-    {
-        Integer size =imagesText.size();
+    public void checkImagesTextAmount(Integer num) {
+        Integer size = imagesText.size();
         assertEquals(size, num);
     }
 
     //check images text presence
-    public void imageTextIsDisplayed(WebElement element)
-    {
+    public void imageTextIsDisplayed(WebElement element) {
         element.isDisplayed();
     }
 
     //check images text text
-    public void checkImagesText(WebElement element,String text) {
+    public void checkImagesText(WebElement element, String text) {
 
         assertEquals(element.getText(), text);
     }

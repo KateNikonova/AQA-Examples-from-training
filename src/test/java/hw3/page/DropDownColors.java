@@ -10,18 +10,18 @@ public class DropDownColors {
 
     public WebDriver driver;
 
-    public DropDownColors(WebDriver driver){
+    public DropDownColors(WebDriver driver) {
         PageFactory.initElements(driver, this);
-        this.driver=driver;
+        this.driver = driver;
     }
 
     // Different Elements Page - Colors dropdown
-    @FindBy(css="div.colors>select.uui-form-element")
+    @FindBy(css = "div.colors>select.uui-form-element")
     public WebElement dropdownColor;
 
 
     //Select element from dropdown by text
-    public void selectElementFromColors(String text){
+    public void selectElementFromColors(String text) {
         Select dropdownColorsMethod = new Select(dropdownColor);
         dropdownColorsMethod.selectByVisibleText(text);
     }

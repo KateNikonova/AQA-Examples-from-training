@@ -9,9 +9,9 @@ public class DifferentElementPageCheckboxes {
 
     public WebDriver driver;
 
-    public DifferentElementPageCheckboxes(WebDriver driver){
+    public DifferentElementPageCheckboxes(WebDriver driver) {
         PageFactory.initElements(driver, this);
-        this.driver=driver;
+        this.driver = driver;
     }
 
     // Water checkbox locator
@@ -30,7 +30,7 @@ public class DifferentElementPageCheckboxes {
     @FindBy(css = "div.checkbox-row>label:nth-child(4)")
     public WebElement checkFire;
 
-    public void selectCheckbox(WebElement element){
+    public void selectCheckbox(WebElement element) {
         element.click();
     }
 

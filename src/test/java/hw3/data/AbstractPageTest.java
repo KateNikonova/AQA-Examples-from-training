@@ -8,20 +8,18 @@ import org.testng.annotations.BeforeClass;
 public class AbstractPageTest {
 
 
-    protected static WebDriver driver;
+    protected WebDriver driver;
 
     @BeforeClass(alwaysRun = true)
-    public void ChromeSetUp()
-    {
+    public void ChromeSetUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
 
 
     @AfterClass(alwaysRun = true)
-    public  void ChromeClose()
-    {
+    public void ChromeClose() {
         driver.quit();
-        driver=null;
+        driver = null;
     }
 }

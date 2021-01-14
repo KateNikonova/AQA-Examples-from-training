@@ -10,17 +10,17 @@ public class DropDownService {
 
     public WebDriver driver;
 
-    public DropDownService(WebDriver driver){
+    public DropDownService(WebDriver driver) {
         PageFactory.initElements(driver, this);
-        this.driver=driver;
+        this.driver = driver;
     }
 
     //service dropdown
-    @FindBy(css="ul.uui-navigation.nav.navbar-nav.m-l8>li.dropdown")
+    @FindBy(css = "ul.uui-navigation.nav.navbar-nav.m-l8>li.dropdown")
     public WebElement dropdownService;
 
     //open service dropdown
-    public void openServiceDropdown(){
+    public void openServiceDropdown() {
         dropdownService.click();
     }
 
@@ -29,7 +29,7 @@ public class DropDownService {
     public WebElement differentPageItem;
 
     //Open Different Elements Page
-    public void openDifferentElementsPage(){
+    public void openDifferentElementsPage() {
         differentPageItem.click();
     }
 

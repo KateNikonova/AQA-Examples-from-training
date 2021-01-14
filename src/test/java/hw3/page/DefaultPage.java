@@ -6,20 +6,20 @@ import org.openqa.selenium.support.PageFactory;
 
 import static org.testng.Assert.assertEquals;
 
-public class DefaultPage{
+public class DefaultPage {
 
     public WebDriver driver;
 
-    public DefaultPage(WebDriver driver){
+    public DefaultPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
-        this.driver=driver;
+        this.driver = driver;
     }
 
-    public void openDefaultPage(){
+    public void openDefaultPage() {
         driver.get(GetProperties.getProperty("mainPage"));
     }
 
-    public void checkDefaultPageTitle(){
+    public void checkDefaultPageTitle() {
         assertEquals(driver.getTitle(), GetProperties.getProperty("pageTitle"));
     }
 }

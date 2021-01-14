@@ -18,7 +18,7 @@ public class DefaultPageVPOTest extends AbstractPageTest {
     public static String multiText;
 
     @BeforeClass
-    public static void startUp() {
+    public void startUp() {
         defaultPage =new DefaultPage(driver);
         loginPage = new LoginPage(driver);
         header = new Headers(driver);

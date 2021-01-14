@@ -7,6 +7,7 @@ import java.util.Properties;
 public class GetProperties {
     protected static FileInputStream fileInputStream;
     protected static Properties PROPERTIES;
+
     static {
         try {
             fileInputStream = new FileInputStream("src/test/resources/hw3/conf.properties");
@@ -19,8 +20,12 @@ public class GetProperties {
                 try {
                     fileInputStream.close();
                 } catch (IOException e) {
-                    e.printStackTrace(); } } }
+                    e.printStackTrace();
+                }
+        }
+    }
 
     public static String getProperty(String key) {
-        return PROPERTIES.getProperty(key); }
+        return PROPERTIES.getProperty(key);
+    }
 }

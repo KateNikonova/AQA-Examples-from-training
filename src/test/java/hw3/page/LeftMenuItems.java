@@ -13,9 +13,9 @@ public class LeftMenuItems {
 
     public WebDriver driver;
 
-    public LeftMenuItems(WebDriver driver){
+    public LeftMenuItems(WebDriver driver) {
         PageFactory.initElements(driver, this);
-        this.driver=driver;
+        this.driver = driver;
     }
 
     // home item locator
@@ -27,29 +27,29 @@ public class LeftMenuItems {
     public WebElement menuItemContactForm;
 
     //service item locator
-    @FindBy(css="ul.sidebar-menu>li:nth-child(3)>a>span")
+    @FindBy(css = "ul.sidebar-menu>li:nth-child(3)>a>span")
     public WebElement menuItemService;
 
     //metal & colors item locator
-    @FindBy(css="ul.sidebar-menu>li:nth-child(4)>a>span")
+    @FindBy(css = "ul.sidebar-menu>li:nth-child(4)>a>span")
     public WebElement menuItemMetalColors;
 
     //element packs item locator
-    @FindBy(css="ul.sidebar-menu>li:nth-child(5)>a>span")
+    @FindBy(css = "ul.sidebar-menu>li:nth-child(5)>a>span")
     public WebElement menuItemElementPacks;
 
     //get all headers
-    @FindBy(css="ul.sidebar-menu>li")
+    @FindBy(css = "ul.sidebar-menu>li")
     public List<WebElement> items;
 
     //check items text
-    public void checkItems(WebElement element,String text) {
+    public void checkItems(WebElement element, String text) {
         assertEquals(element.getText(), text);
     }
 
     //check items amount
     public void checkItemsAmount(Integer num) {
-        Integer size =items.size();
+        Integer size = items.size();
         assertEquals(size, num);
     }
 }

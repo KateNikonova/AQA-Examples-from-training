@@ -9,9 +9,9 @@ public class DifferentElementsPageRadioButtons {
 
     public WebDriver driver;
 
-    public DifferentElementsPageRadioButtons(WebDriver driver){
+    public DifferentElementsPageRadioButtons(WebDriver driver) {
         PageFactory.initElements(driver, this);
-        this.driver=driver;
+        this.driver = driver;
     }
 
     // Gold radio locator
@@ -30,7 +30,7 @@ public class DifferentElementsPageRadioButtons {
     @FindBy(css = "div.checkbox-row>label.label-radio:nth-child(4)")
     public WebElement radioSelen;
 
-    public void selectRadio(WebElement element){
+    public void selectRadio(WebElement element) {
         element.click();
     }
 }

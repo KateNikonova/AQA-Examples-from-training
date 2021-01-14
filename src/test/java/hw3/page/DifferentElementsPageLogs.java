@@ -9,9 +9,9 @@ public class DifferentElementsPageLogs {
 
     public WebDriver driver;
 
-    public DifferentElementsPageLogs(WebDriver driver){
+    public DifferentElementsPageLogs(WebDriver driver) {
         PageFactory.initElements(driver, this);
-        this.driver=driver;
+        this.driver = driver;
     }
 
     // log Water locator
@@ -31,7 +31,7 @@ public class DifferentElementsPageLogs {
     public WebElement logYellow;
 
     // Check log presence
-    public void checkLogPresence(WebElement element){
+    public void checkLogPresence(WebElement element) {
         element.isDisplayed();
     }
 }

@@ -12,61 +12,57 @@ public class LoginPage {
 
     public WebDriver driver;
 
-    public LoginPage(WebDriver driver){
+    public LoginPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
-        this.driver=driver;
+        this.driver = driver;
     }
 
-// login view locator
+    // login view locator
     @FindBy(id = "user-icon")
     private WebElement loginVew;
 
-// login enter locator
-   @FindBy(id = "name")
-   private WebElement loginField;
+    // login enter locator
+    @FindBy(id = "name")
+    private WebElement loginField;
 
-// password enter locator
-   @FindBy(id = "password")
-   private WebElement passwordField;
+    // password enter locator
+    @FindBy(id = "password")
+    private WebElement passwordField;
 
-// login button locator
-   @FindBy(id = "login-button")
-   private WebElement loginButton;
+    // login button locator
+    @FindBy(id = "login-button")
+    private WebElement loginButton;
 
-// user name locator
-   @FindBy(id = "user-name")
-   private WebElement userLogName;
+    // user name locator
+    @FindBy(id = "user-name")
+    private WebElement userLogName;
 
-// open login view
-   public void openView(){
+    // open login view
+    public void openView() {
 
-       loginVew.click();
-   }
+        loginVew.click();
+    }
 
-// enter login
-   public void inputLogin(String login)
-   {
+    // enter login
+    public void inputLogin(String login) {
 
-       loginField.sendKeys(login);
-   }
+        loginField.sendKeys(login);
+    }
 
-// enter password
-    public void inputPassword(String password)
-    {
+    // enter password
+    public void inputPassword(String password) {
 
         passwordField.sendKeys(password);
     }
 
-// login
-   public void clickLoginButton()
-   {
+    // login
+    public void clickLoginButton() {
 
-       loginButton.click();
-   }
+        loginButton.click();
+    }
 
-// check user name
-    public void checkUserName(String text)
-    {
+    // check user name
+    public void checkUserName(String text) {
 
         assertEquals(userLogName.getText(), text);
     }
