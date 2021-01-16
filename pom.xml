@@ -19,11 +19,20 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
+                <suite.file>${project.basedir}/src/test/resources/hw3/DefaultVPOWebDriverTest.xml</suite.file>
+            </properties>
+        </profile>
+        <profile>
+            <id>suite_hw2</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
                 <suite.file>${project.basedir}/src/test/resources/hw2/DefaultWebDriverTest.xml</suite.file>
             </properties>
         </profile>
         <profile>
-            <id>suite3</id>
+            <id>suite_hw1_1</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>
@@ -32,7 +41,7 @@
             </properties>
         </profile>
         <profile>
-            <id>suite1</id>
+            <id>suite_hw1_2</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>
@@ -41,7 +50,7 @@
             </properties>
         </profile>
         <profile>
-            <id>suite2</id>
+            <id>suite_hw1_3</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>
