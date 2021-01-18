@@ -3,14 +3,19 @@ package hw4.ex1;
 import hw4.data.AbstractPageTest;
 import hw4.data.GetProperties;
 import hw4.listeners.AllureListener;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Feature("Different Elements Page")
 @Listeners({AllureListener.class})
 public class DifferentElementsAllureTest extends AbstractPageTest {
 
 
     @Test (description = "Verify selection of elements and logging on Different Elements page")
+    @Story("User can select elements")
+    @Story("Elements, those selected by User, are reflected in logs")
     public void differentPageAllureTest() {
 
         //1. Open test site by URL

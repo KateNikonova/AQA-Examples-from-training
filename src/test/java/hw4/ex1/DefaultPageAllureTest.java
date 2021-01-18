@@ -3,14 +3,22 @@ package hw4.ex1;
 import hw4.data.AbstractPageTest;
 import hw4.data.GetProperties;
 import hw4.listeners.AllureListener;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Feature("Default Page")
 @Listeners({AllureListener.class})
 public class DefaultPageAllureTest extends AbstractPageTest {
 
 
     @Test(description = "Verify items on Default page after login")
+    @Story("User can log in")
+    @Story("Headers are present and have proper names")
+    @Story("Images are present with appropriate texts")
+    @Story("User can switch to frame and back")
+    @Story("Left menu items are present")
     public void defaultPageAllureTest() {
         //1. Open test site by URL
         //2. Assert Browser title
