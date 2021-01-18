@@ -3,8 +3,9 @@
 
     <test name="WebDriver Passed">
         <classes>
-            <class name="hw4.ex2.DifferentElementsAllureTest"/>
             <class name="hw4.ex1.DefaultPageAllureTest"/>
+            <class name="hw4.ex1.DifferentElementsAllureTest"/>
+            <class name="hw4.ex2.DefaultPageVPOTestFail"/>
         </classes>
     </test>
 
