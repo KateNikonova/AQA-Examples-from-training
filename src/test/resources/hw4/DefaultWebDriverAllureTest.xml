@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="WebDriver Allure Tests">
+
+    <test name="WebDriver Passed">
+        <classes>
+            <class name="hw4.ex1.DefaultPageAllureTest"/>
+            <class name="hw4.ex1.DifferentElementsAllureTest"/>
+        </classes>
+    </test>
+
+    <test name="WebDriver Failed">
+        <classes>
+            <class name="hw4.ex2.DefaultPageAllureTestFail"/>
+        </classes>
+    </test>
+
+</suite>
