@@ -17,6 +17,7 @@ public abstract class AbstractPageTest {
 
     @BeforeMethod()
     public void ChromeSetUp(ITestContext testContext) {
+        System.setProperty("webdriver.chrome.driver", "C:\\Chrome\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         testContext.setAttribute("driver", driver);
