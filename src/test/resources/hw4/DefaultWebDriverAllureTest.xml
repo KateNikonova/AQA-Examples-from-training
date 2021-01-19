@@ -10,7 +10,7 @@
 
     <test name="WebDriver Failed">
         <classes>
-            <class name="hw4.ex2.DefaultPageVPOTestFail"/>
+            <class name="hw4.ex2.DefaultPageAllureTestFail"/>
         </classes>
     </test>
 
