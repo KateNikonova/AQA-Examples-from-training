@@ -1,0 +1,9 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="JDI Test">
+    <test name="Metal and Colors data selection test">
+        <classes>
+            <class name="hw6.MetalAndColorsFormTest"/>
+        </classes>
+    </test>
+</suite>
