@@ -2,6 +2,7 @@
 .idea/
 target/
 
+
 # to exclude files
 *.iml
 **/allure-results
