@@ -44,7 +44,7 @@ public class DataProviderTestData {
                             .replaceAll("\\[", "")
                             .replaceAll("]", "")
             };
-            result.add(new Object[]{item.summary, item.elements, item.color, item.metals, item.vegetables});
+            result.add(new Object[]{item});
         }
 
         return result.toArray(new Object[0][0]);

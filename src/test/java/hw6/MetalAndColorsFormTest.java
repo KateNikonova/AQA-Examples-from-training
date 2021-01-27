@@ -2,6 +2,7 @@ package hw6;
 
 
 import hw6.data.DataProviderTestData;
+import hw6.entities.MetalAndColorsTestData;
 import org.testng.annotations.Test;
 
 
@@ -12,17 +13,10 @@ public class MetalAndColorsFormTest extends AbstractJdiTest {
 
     @Test(dataProviderClass = DataProviderTestData.class,
             dataProvider = "getMetalsAndColorsTestData")
-    public void idiMetalAndColorsFormTest(int[] summary, String[] elements,
-                                          String color, String metals,
-                                          String[] vegetables) {
+    public void jdiMetalAndColorsFormTest(MetalAndColorsTestData testData) {
 
-        metalAndColorsPage.selectNumbers(summary);
-        metalAndColorsPage.selectElements(elements);
-        metalAndColorsPage.selectColor(color);
-        metalAndColorsPage.selectMetal(metals);
-        metalAndColorsPage.selectVegetable(vegetables);
-        metalAndColorsPage.clickSubmitButton();
-        metalAndColorsPage.verifyResult(summary, elements, color, metals, vegetables);
+        metalAndColorsPage.fillInMetalAndColorsData(testData);
+        metalAndColorsPage.verifyResult(testData);
 
     }
 

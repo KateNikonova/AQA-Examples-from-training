@@ -6,7 +6,6 @@ import com.epam.jdi.light.elements.composite.WebPage;
 import com.epam.jdi.light.elements.pageobjects.annotations.FindBy;
 import com.epam.jdi.light.elements.pageobjects.annotations.Url;
 import com.epam.jdi.light.elements.pageobjects.annotations.locators.UI;
-import com.epam.jdi.light.ui.html.elements.common.Button;
 import com.epam.jdi.light.ui.html.elements.common.Icon;
 import hw6.forms.LogInForm;
 import hw6.entities.User;
@@ -18,9 +17,6 @@ public class JdiHomePage extends WebPage {
 
     @FindBy(id = "user-icon")
     public Icon userIcon;
-
-    @UI(".uui-button dark-blue btn-login")
-    public Button submit;
 
     @UI(".uui-navigation.nav.navbar-nav.m-l8")
     public Menu headerMenu;
