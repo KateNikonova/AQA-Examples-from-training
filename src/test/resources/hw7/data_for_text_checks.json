@@ -1,0 +1,27 @@
+[
+    {      
+        "startLanguage": "English",
+        "inputText": "Mystakes can be done",
+        "expected": "Mistakes"
+    },
+    {
+        "language": "Russian",
+        "inputText": "Допустимы ли ошыбки",
+        "expected": "ошибки"
+    },   
+   {
+        "language": "Russian",
+        "inputText": "пе4аль",
+        "expected": "печаль"
+    },
+    {      
+        "startLanguage": "English",
+        "inputText": "miЖstake",
+        "expected": "mistake"
+    },
+    {      
+        "startLanguage": "Russian",
+        "inputText": "пра4ечная",
+        "expected": "прачечная"
+    }
+]
