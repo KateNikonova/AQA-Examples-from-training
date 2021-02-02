@@ -137,6 +137,8 @@
             <artifactId>selenium-api</artifactId>
             <version>3.141.59</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-cucumber6-jvm</artifactId>
             <version>${allure.version}</version>
